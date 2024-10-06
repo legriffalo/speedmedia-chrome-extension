@@ -20,7 +20,7 @@
     },
 
     "background": {
-        "service_worker": "sw.js"
+        "service_worker": "background.js"
     },
 
     "action":{ 

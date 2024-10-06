@@ -1,0 +1,13 @@
+.flippable{
+    height:15vh;
+
+}
+
+
+.hidden{
+    height:0px;
+    opacity:0;
+    overflow-y: hidden;
+}
+
+

@@ -1,29 +1,41 @@
 <html>
+    <head>
+        <link rel ='stylesheet' href="./css/main.css">    </head>
     <body>
         <img src = './images/icon48.png'>
         <div id = "reading">
             <h1>Read</h1>
             <div id = "speed_reader">
-
+            <button id = "open_reader">open reader</button>
             </div>
 
         </div>
 
-        <div id = "video">
-            <h1>Video</h1>
-            <div id = "video_controls">
+        <div id = "video" >
+            <h1 class = 'flippable'>Video</h1>
+            <div id = "video_controls" class ='flippable'>
+                <input type="range" min="0.25" max="10.0" value="1" step = "0.25" class="slider" id="video_range"> <span id = "show_vid">1.00</span>
 
+                <textarea placeholder="input playback speed"></textarea>
             </div>
 
         </div>
         <div id = "audio">
-            <h1>Audio</h1>
-            <div id = "audio_controls">
+            <h1  class = 'flippable' >Audio</h1>
+            <div id = "audio_controls" class ='flippable'>
+                <input type="range" min="0.25" max="10.0" value="1" step = "0.25" class="slider" id="audio_range"> <span id = "show_aud">1.00</span>
+
+                <textarea placeholder="input playback speed"></textarea>
 
             </div>
 
         </div>
+
+
+        <div id = "container"></div>
     </body>
 
-    <script src = './background.js'></script>
+
+
+    <script src = 'background.js'></script>
 </html>

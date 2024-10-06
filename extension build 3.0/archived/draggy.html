@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body,
+      html {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+      #box {
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        background-color: lightblue;
+      }
+      #box:active {
+        border: 1px solid black;
+        box-shadow: 2px 2px 5px 5px #bbb6b6;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+  </body>
+  <script>
+    var box = document.getElementById("box");
+    var diff = {};
+    var getBoxPos = function() {
+      return {
+        x: box.getBoundingClientRect().x,
+        y: box.getBoundingClientRect().y
+      };
+    };
+    var calcDiff = function(x, y) {
+      var boxPos = getBoxPos();
+      diff = {
+        x: x - boxPos.x,
+        y: y - boxPos.y
+      };
+    };
+    var handleMouseMove = function(event) {
+      var x = event.x;
+      var y = event.y;
+      x -= diff.x;
+      y -= diff.y;
+
+      console.log("X " + x + " Y " + y);
+      box.style.position = "absolute";
+      box.style.transform = "translate(" + x + "px ," + y + "px)";
+    };
+
+    box.addEventListener("mousedown", function(e) {
+      calcDiff(e.x, e.y);
+      box.addEventListener("mousemove", handleMouseMove, true);
+    });
+
+    box.addEventListener("mouseup", function(e) {
+      console.log("onmouseup");
+      box.removeEventListener("mousemove", handleMouseMove, true);
+    });
+  </script>
+</html>
