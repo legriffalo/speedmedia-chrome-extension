@@ -1,106 +1,115 @@
 <html>
 <head>
-<style>
+    <style>
+        body{
+            font-size: 12px;
+        }
+        #controls{
+            max-height:25vh;
+            margin-left:2px;
+        }
+        .sbs{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .header{
+           background-color:#ddd ;
+           height:10vh;
+           position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+        }
+        .flip{
+            width:10vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+        #head{
+            width:100%;
+          
+        } 
     
-    body{
-        font-size: 9px;
-    }
-    #controls{
-        max-height:175px;
-        margin-left:2px;
-    }
-    .sbs{
-        display:flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-    .header{
-       background-color:#ddd ;
-       height:60px;
-    }
-    .flip{
-        width:60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-    }
-    #head{width:100%;
-    } 
-
-    #logo{height:60px;}
-    h3{
-        color:#9C0D38;
-        font-size: 12px;
-        width:95%;
+        #logo{height:10vh;}
+        h3{
+            color:#9C0D38;
+            font-size: 20px;
+            width:95%;
+            margin:auto;
+            text-align: center; 
+            margin-top:4px;   
+            margin-bottom: 2px;
+            background-color: #ddd;
+    
+        }
+        h1{
+            font-size: 4.5vh;
+            width:90%;
+            margin:auto;
+            text-align: center;
+            color:#F25F5C;
+            text-transform:uppercase;
+            -webkit-text-fill-color: white;
+            -webkit-text-stroke-color: #F25F5C;
+            -webkit-text-stroke-width: 0.2vh;
+        
+        }
+        h4{
+        font-size: 2vh;
+        width:10vh;
+        height:10vh;
         margin:auto;
         text-align: center; 
-        margin-top:4px;   
-        margin-bottom: 2px;
-        background-color: #ddd;
-
-    }
-    h1{
-        font-size: 35px;
-        width:90%;
-        margin:auto;
-        text-align: center;
-        color:#F25F5C;
-        text-transform:uppercase;
-        -webkit-text-fill-color: white;
-        -webkit-text-stroke-color: #F25F5C;
-        -webkit-text-stroke-width: 3px;
+        color:#9C0D38;
+        transform: rotate(90deg) translate(0.5vh);
+        }
+        #section1{
+            margin-top: 12vh;
+            margin-bottom:1vh;
+        }
+        #section2{
+            min-height:30vh;
+            margin-bottom:1vh;
     
-    }
-    h4{
-    font-size: small;
-    width:70px;
-    height:60px;
-    margin:auto;
-    text-align: center; 
-    color:#9C0D38;
-    transform: rotate(90deg) translate(0,5px);
-    }
-    #section1{
-        height:17px;
-    }
-    #section2{
-        height:178px;
-    }
-    #section3{
-        height:187px;
-    }
-    .attention{
-        background-color: #9C0D38;
-        color: #ddd;
-        font-size: 10px;
-        height:40px;
-        text-align: center;
-        align-content: center;
-    }
-
-    table{
-        font-size: 8px;
-        table-layout: fixed;
-        border-style: solid;
-    }
-    tr{min-height: 20px;}
-    tr:nth-child(even){background-color: #f2f2f2;}
+        }
+        #section3{
+            min-height:30vh;
+            margin-bottom:1vh;
     
-
-    tr:hover {background-color: #ddd;}
-    th {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        font-size: 12px;
-        text-align: center;
-        background-color: #1C3144;
-        color: white;
-    }
-    td:nth-child(odd){width:45%}
-    #nope{ color:red;}
+        }
+        .attention{
+            background-color: #9C0D38;
+            color: #ddd;
+            font-size: 10px;
+            height:40px;
+            text-align: center;
+            align-content: center;
+        }
     
-</style>
+        table{
+            font-size: 12px;
+            table-layout: fixed;
+            border-style: solid;
+        }
+        tr{min-height: 20px;}
+        tr:nth-child(even){background-color: #f2f2f2;}
+        
+    
+        tr:hover {background-color: #ddd;}
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            font-size: 20px;
+            text-align: center;
+            background-color: #1C3144;
+            color: white;
+        }
+        td:nth-child(odd){width:45%}
+        #nope{ color:red;}
+    </style>
 </head>
 
 <body>
@@ -140,7 +149,7 @@
     <div id = "section3">
         <table>
             <tr><th>hotkey</th><th>Function</th></tr>
-            <tr> <td><b>ctrl + M </b></td> <td>open speed media</td> </tr>
+            <tr> <td><b>ctrl + X </b></td> <td>open speed media</td> </tr>
             <tr> <td><b>ctrl + shft + h</b></td> <td>come back here to see hotkeys</td></tr>
 
             <tr><td>&nbsp;</td><td></td>

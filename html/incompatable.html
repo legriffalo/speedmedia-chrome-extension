@@ -1,12 +1,13 @@
 <html>
 <head>
+
 <style>
 
     body{
-        font-size: 9px;
+        font-size: 12px;
     }
     #controls{
-        max-height:180px;
+        max-height:25vh;
         margin-left:2px;
     }
     .sbs{
@@ -16,22 +17,28 @@
     }
     .header{
        background-color:#ddd ;
-       height:60px;
+       height:10vh;
+       position:fixed;
+        top:0;
+        left:0;
+        width:100%;
     }
     .flip{
-        width:60px;
+        width:10vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
     }
-    #head{width:100%;
+    #head{
+        width:100%;
+      
     } 
 
-    #logo{height:60px;}
+    #logo{height:10vh;}
     h3{
         color:#9C0D38;
-        font-size: 12px;
+        font-size: 20px;
         width:95%;
         margin:auto;
         text-align: center; 
@@ -41,7 +48,7 @@
 
     }
     h1{
-        font-size: 35px;
+        font-size: 4.5vh;
         width:90%;
         margin:auto;
         text-align: center;
@@ -49,26 +56,32 @@
         text-transform:uppercase;
         -webkit-text-fill-color: white;
         -webkit-text-stroke-color: #F25F5C;
-        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-width: 0.2vh;
     
     }
     h4{
-    font-size: small;
-    width:70px;
-    height:60px;
+    font-size: 2vh;
+    width:10vh;
+    height:10vh;
     margin:auto;
     text-align: center; 
     color:#9C0D38;
-    transform: rotate(90deg) translate(0,5px);
+    transform: rotate(90deg) translate(0.5vh);
     }
     #section1{
-        height:55px;
+        margin-top: 12vh;
+        margin-bottom:1vh;
+        min-height:10vh;
     }
     #section2{
-        height:178px;
+        min-height:30vh;
+        margin-bottom:1vh;
+
     }
     #section3{
-        height:187px;
+        min-height:30vh;
+        margin-bottom:1vh;
+
     }
     .attention{
         background-color: #9C0D38;
@@ -80,7 +93,7 @@
     }
 
     table{
-        font-size: 8px;
+        font-size: 12px;
         table-layout: fixed;
         border-style: solid;
     }
@@ -92,7 +105,7 @@
     th {
         padding-top: 12px;
         padding-bottom: 12px;
-        font-size: 12px;
+        font-size: 20px;
         text-align: center;
         background-color: #1C3144;
         color: white;
@@ -103,7 +116,8 @@
 </head>
 
 <body>
-   <div class = "sbs header"><h1 id = "head" >Speedia</h1>
+   <div class = "sbs header">
+    <h1 id = "head" >Speedia</h1>
         <div class = "flip">
             <h4>by Data Ronin</h4>
         </div>
@@ -112,7 +126,7 @@
     
     <div id = "section1">
         <p>The page you're opening the reader on is sadly <span id = "nope"><b>incompatable</b></span>, it is most likely a browser settings page 
-            or another area of yur browser that doe not have any web-based content.
+            or another area of your browser that does not have any web-based content.
         </p>
 
         <p>Visit a site such as <a href = "https://www.youtube.com/" target = "_blank"> youtube </a> to use our extension</p>
@@ -142,7 +156,7 @@
     <div id = "section3">
         <table>
             <tr><th>hotkey</th><th>Function</th></tr>
-            <tr> <td><b>ctrl + M </b></td> <td>open speed media</td> </tr>
+            <tr> <td><b>ctrl + X </b></td> <td>open speed media</td> </tr>
             <tr> <td><b>ctrl + shft + h</b></td> <td>come back here to see hotkeys</td></tr>
 
             <tr><td>&nbsp;</td><td></td>

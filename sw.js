@@ -5,19 +5,6 @@ chrome.action.setBadgeText({
 });
 
 
-// // run a script on all frames except the main one on screen
-// chrome.webNavigation.onCompleted.addListener(function(tab){
-//   console.log("loading in to iframes from sw", tab)
-//   // don't inject into the main frame (id = 0)
-//   chrome.scripting.executeScript({
-//     target : {tabId:tab.id,allFrames : true},
-//     files : [ "all-frames.js"],
-//   });
-  
-// });
-
-
-
 
 // Listen for installation and if it happens show the 
 // installation welcome page, note this will not trigger for updates

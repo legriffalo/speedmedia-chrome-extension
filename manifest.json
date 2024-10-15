@@ -5,7 +5,7 @@
 
     "description": "Add speed reading and media speed controls on all pages",
 
-    "version": "8.0",
+    "version": "8.1",
 
     "icons": {
       "32": "images/icon32.png",
@@ -25,7 +25,7 @@
         
     },
     
-    "permissions": ["activeTab","tabs","scripting","storage","webNavigation"],
+    "permissions": ["activeTab","tabs","scripting","storage"],
 
     "host_permissions": ["*://*/*"],
 
@@ -50,8 +50,10 @@
     "commands": {
         "_execute_action": {
         "suggested_key": {
-            "default": "Ctrl+M",
-            "mac": "Command+M"
+            "default": "Ctrl + X",
+
+            "windows": "Ctrl + X",
+            "mac": "MacCtrl + X"
             }
         }
     }
