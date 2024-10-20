@@ -28,8 +28,8 @@ function initialiseExtension(state){
     box.style.top = "0px"
     box.style.left = "0px"
     box.style.transform = "translate(" + state.x + "px ," + state.y + "px)";
-    document.getElementById('wpm').value = state.wordsperminute;
-    document.getElementById("video_range").value = state.vidspeed;
+    document.getElementById('wpm-speedia').value = state.wordsperminute;
+    document.getElementById("video_range-speedia").value = state.vidspeed;
     document.getElementById("show_vid").innerHTML = Number(state.vidspeed).toFixed(2);
     
     setTimeout(()=>{
@@ -130,7 +130,7 @@ function doc_keyUp(e) {
         extensionState.lastread = result;
         updateExtensionState({"lastread":result}, "sent by rs hotkey");
         // open reader and play 
-        document.getElementById("speed_reader").classList.remove('hidden');
+        document.getElementById("speed_reader-speedia").classList.remove('hidden');
         i = 0;
         playReader(extensionState.wordsperminute);
       })
@@ -141,7 +141,7 @@ function doc_keyUp(e) {
       extCommand = true;
 
       if(reader == ''){
-        document.getElementById("speed_reader").classList.remove('hidden');
+        document.getElementById("speed_reader-speedia").classList.remove('hidden');
         stop();
         playReader(extensionState.wordsperminute);
       }

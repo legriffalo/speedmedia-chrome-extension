@@ -13,7 +13,7 @@ document.getElementById('wpm_down').addEventListener('pointerdown',()=>{
   });
 
 // allow custom wpm to be input in text box
-document.getElementById("wpm").addEventListener("change",(e)=>{
+document.getElementById("wpm-speedia").addEventListener("change",(e)=>{
     // extensionState.wordsperminute = e.target.value;
     wpm = Number(e.target.value)
     updateExtensionState({"wordsperminute":wpm},"sent by reader speed hotkey");
@@ -32,7 +32,7 @@ for(let i = 0;i<headings.length;i++){
 
 // Make playback speeds update 
 // listener to show playback speeds in UI
-var videoRange = document.getElementById('video_range');
+var videoRange = document.getElementById('video_range-speedia');
 
 // clean out and move to preload .js?
 videoRange.addEventListener('change',(e)=>{
@@ -45,3 +45,9 @@ videoRange.addEventListener('change',(e)=>{
     // console.log("trying to send start message to ", el)
     el.contentWindow.postMessage(`{"message":"speedChange","state":${JSON.stringify(extensionState)}}`,"*")});
 });
+
+
+helper = document.getElementById("helperbutton11925");
+helper.addEventListener("pointerdown", (e)=>{
+  sendMessageExtension("help","")
+})

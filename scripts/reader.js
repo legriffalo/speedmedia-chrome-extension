@@ -41,12 +41,12 @@ function playReader(y){
 };
 //////////// make speed reader buttons work ////////////
 // clicked the play button
-document.getElementById('play').addEventListener('pointerdown',()=>{
+document.getElementById('play-speedia').addEventListener('pointerdown',()=>{
   //send a mesage
   playReader(extensionState.wordsperminute);
 });
 // play double tapped
-document.getElementById('play').addEventListener('doubletap',()=>{
+document.getElementById('play-speedia').addEventListener('doubletap',()=>{
   //send a mesage
   // console.log("double tapped bebe");
   getClip().then((result)=>{
@@ -58,12 +58,12 @@ document.getElementById('play').addEventListener('doubletap',()=>{
   });
 });
 // pause button clicked
-document.getElementById('pause').addEventListener('pointerdown',()=>{
+document.getElementById('pause-speedia').addEventListener('pointerdown',()=>{
   // console.log('pausing reader');
   pause();
 })
 // restart button clicked
-document.getElementById('restart').addEventListener('pointerdown',()=>{
+document.getElementById('restart-speedia').addEventListener('pointerdown',()=>{
   // console.log('stopping reader');
   stop();
   document.getElementById('word_show').innerHTML = extensionState.lastread.split(' ')[i];

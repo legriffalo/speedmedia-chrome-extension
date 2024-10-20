@@ -1,5 +1,18 @@
 /* Add all:initial to each block to reset to defaults =)  */
 
+#helperbutton11925{
+  position:absolute;
+  /* z-index:1000000000001; */
+  color:white;
+  background-color:darkgrey;
+  width:1.3vw;
+  height:1.3vw;
+  right:2vw;
+  top:0.3vw;
+  border-radius: 50%;
+  font-size: 1vw;
+  text-align: center;
+}
 
 #popout11925{
   all: initial;
@@ -215,6 +228,8 @@ border-radius: 0 0 2vw 2vw;
 #popout11925 div:nth-of-type(3) h4{
   border-radius: 0 0 1vw 1vw;
   }
+
+
 #speed_settings{
   width:80%;
   margin:auto;
@@ -225,13 +240,17 @@ border-radius: 0 0 2vw 2vw;
   margin-top:1vh;
 }
 
-#wpm{
-  width:2vw;
+#wpm-speedia{
+  background-color: white;
+  width:3.5vw;
   font-size: 1vw;
   text-align: center;
+  color:black;
 }
 
-
+#wpm-speedia::placeholder{
+  color:#bbb6b6;
+}
 
 
 
