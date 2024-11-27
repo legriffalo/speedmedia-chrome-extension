@@ -1,4 +1,4 @@
-# 👋 Hei, welcome Speedia
+# 👋 Hei, welcome to project Speedia
 
 ## 📝 Project Description
 
