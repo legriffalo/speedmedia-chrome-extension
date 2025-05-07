@@ -1,12 +1,14 @@
 // This file generates the core elements and variable for the extension
-// It runs in any page the extension is initialised in 
-console.log('ver 8.2 Speedia extension initialised')
+// It runs in any page the extension is initialised in
+console.log("ver 8.2 Speedia extension initialised");
 // load the URL for icon image
 var ico = chrome.runtime.getURL("images/icon48.png");
 // variable for on/off
-var on = 0; 
+var on = 0;
 // inject the pop up on the page so it can be visible
-document.body.insertAdjacentHTML("afterend", `
+document.body.insertAdjacentHTML(
+  "afterend",
+  `
   
 <div  class = 'selectDisable' id= 'popout11925' style= "opacity:0;">
     <div class = 'header123'>
@@ -40,30 +42,41 @@ document.body.insertAdjacentHTML("afterend", `
 
     </div>
         
-</div>`)
+</div>`
+);
 // variable to store the main object
 var box = document.getElementById("popout11925");
 // Start extensions with an ampty object for state
 var extensionState = {};
 // try to get Extension state from Chrome storage and save to variable
-getExtensionState().then((result)=>{
-  // set the state variable
-  extensionState = result;
-  // Message all frames and start processes
-  window.postMessage(`{"message":"startExtension","state":${JSON.stringify(result)}}`,"*")
-  iFrames = document.querySelectorAll('iframe');
-  iFrames.forEach((el)=>{
-    console.log("trying to send start message to ", el)
-    el.contentWindow.postMessage(`{"message":"startExtension","state":${JSON.stringify(result)}}`,"*")
+getExtensionState()
+  .then((result) => {
+    // set the state variable
+    extensionState = result;
+    // Message all frames and start processes
+    window.postMessage(
+      `{"message":"startExtension","state":${JSON.stringify(result)}}`,
+      "*"
+    );
+    iFrames = document.querySelectorAll("iframe");
+    iFrames.forEach((el) => {
+      console.log("trying to send start message to ", el);
+      el.contentWindow.postMessage(
+        `{"message":"startExtension","state":${JSON.stringify(result)}}`,
+        "*"
+      );
     });
 
-  //initialise the extension 
-  initialiseExtension(extensionState);
-}).then(
-  setTimeout(()=>{
-    console.log("Speedia was initialised with these properties", extensionState)
-  },500)
-
-);
+    //initialise the extension
+    initialiseExtension(extensionState);
+  })
+  .then(
+    setTimeout(() => {
+      console.log(
+        "Speedia was initialised with these properties",
+        extensionState
+      );
+    }, 500)
+  );
 // log for keys pressed
-keyLog = ["",""];
+keyLog = ["", ""];
